@@ -1,0 +1,10 @@
+@endpoint=http://localhost:{{$dotenv PORT}}/api
+
+
+### route 404 erreur
+GET {{endpoint}}/truc
+
+### Documentation
+GET {{endpoint}}
+
+

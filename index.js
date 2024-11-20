@@ -1,15 +1,14 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+import { createServer } from 'node:http';
+import 'dotenv/config';
 
-app.use(express.static('public'));
+import app from './app/index.app.js'; // Import the app from the app folder
 
-app.get('/', (req, res) => {
-  res.send('Bienvenue sur le serveur Express!');
-});
+const PORT = process.env.PORT || 3000;
 
+const httpServer = createServer(app);
 
-// Démarrer le serveur
-app.listen(port, () => {
-  console.log(`Le serveur écoute sur http://localhost:${port}`);
+httpServer.listen(PORT, () => {
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`HTTP Server launched at http://localhost:${PORT} !!!`);
+  }
 });
