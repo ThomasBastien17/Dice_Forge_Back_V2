@@ -1,10 +1,19 @@
 @endpoint=http://localhost:{{$dotenv PORT}}/api
 
-
-### route 404 erreur
-GET {{endpoint}}/truc
+### Erreur 404
+GET {{endpoint}}/notfound
 
 ### Documentation
-GET {{endpoint}}
+GET {{endpoint}}-docs
 
+### Recuperer une partie
+GET {{endpoint}}/game/1
 
+### Créer une partie
+POST {{endpoint}}/game
+Content-Type: application/json
+
+{
+    "name": "Le vol des dragons",
+    "licence": "Donjons et dragons"
+}

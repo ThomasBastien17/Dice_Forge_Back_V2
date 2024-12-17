@@ -1,27 +1,41 @@
 {
-  "name": "Dice_Forge_Back_V2",
+  "name": "projet-dice-forge-back",
   "version": "1.0.0",
-  "description": "Version 2 du back de Dice Forge",
+  "homepage": ".",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "test": "ava --exit",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "deploy": "node deploy-db.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "express-jsdoc-swagger": "^1.8.0",
-    "node": "^18.20.5",
-    "nodemon": "^3.1.7",
-    "pg": "^8.13.1",
-    "winston": "^3.17.0",
-    "winston-daily-rotate-file": "^5.0.0"
+    "email-validator": "^2.0.4",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsdoc": "^4.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.3",
+    "pg": "^8.12.0",
+    "socket.io": "^4.7.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/register": "^7.24.6",
+    "ava": "^6.1.3",
+    "supertest": "^7.0.0"
   }
 }
