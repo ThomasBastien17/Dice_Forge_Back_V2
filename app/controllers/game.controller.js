@@ -135,7 +135,7 @@ export const findGamesByUserId = async (req, res) => {
     try {
         const games = await gameDataMapper.findGamesByUserId(userId);
         if(games.length === 0) {
-            return res.status(404).json({ error: 'Aucun jeu trouvé.' });
+            return res.status(200).json({ message: 'Aucune partie pour le moment n\'hesiter pas a crée votre partie.' });
         }
     return res.status(200).json(games);
     } catch (error) {
