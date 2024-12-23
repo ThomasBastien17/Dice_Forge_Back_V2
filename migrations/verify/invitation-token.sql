@@ -2,6 +2,6 @@
 
 BEGIN;
 
--- XXX Add verifications here.
+SELECT invitation_token FROM "game";
 
 ROLLBACK;

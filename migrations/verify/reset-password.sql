@@ -2,6 +2,6 @@
 
 BEGIN;
 
--- XXX Add verifications here.
+SELECT reset_password_token, reset_password_expires FROM "user";
 
 ROLLBACK;
