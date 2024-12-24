@@ -1,9 +1,4 @@
 function errorHandler(err, req, res, next) {
-    // Log de l'erreur pour les environnements non production
-    if (process.env.NODE_ENV !== 'production') {
-        console.error(`[Error] ${err.stack || err.message}`);
-    }
-
     // Définir un code de statut par défaut si absent
     const status = err.status || 500;
 
