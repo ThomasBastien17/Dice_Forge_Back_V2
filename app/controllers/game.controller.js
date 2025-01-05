@@ -13,9 +13,6 @@ const userDataMapper = new UserDataMapper(pool);
 export const allGames = async (req, res) => {
     const games = await gameDataMapper.findAllGames();
     res.status(200).json(games);
-    if (!games) {
-        return res.status(404).json({ error: "Aucun jeu trouvé." });
-    }
 }
 
 export const getGame = async (req, res) => {
