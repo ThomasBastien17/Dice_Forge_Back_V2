@@ -52,13 +52,13 @@ export const createGame = async (req, res) => {
         }
 
         // Envoie de l'email d'invitation
-        const mailOptions = await sendInvitationEmail(email, createdGame.id);
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error("Erreur lors de l'envoi de l'email:", error);
-                return res.status(500).json({ error: "Erreur lors de l'envoi de l'email" });
-            }
-        });
+        //const mailOptions = await sendInvitationEmail(email, createdGame.id);
+        //transporter.sendMail(mailOptions, (error, info) => {
+        //    if (error) {
+        //        console.error("Erreur lors de l'envoi de l'email:", error);
+        //        return res.status(500).json({ error: "Erreur lors de l'envoi de l'email" });
+        //    }
+        //});
 
         return res.status(201).json(createdGame);
     } catch (error) {
